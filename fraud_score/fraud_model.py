@@ -57,7 +57,7 @@ class FraudModel:
             model_params = self.hyperparamaters
         d_train = lgb.Dataset(X.drop(columns=["visitor_profile"]), label=y)
         model = lgb.train(model_params, d_train, 250)
-        model.save_model("model.txt")
+        model.save_model("manual_fraud_model.pkl")
 
     def run_hyperopt(self, X, y, init_round=15, opt_round=25, n_folds=3, random_seed=6):
         train_data = lgb.Dataset(data=X, label=y, free_raw_data=False)
