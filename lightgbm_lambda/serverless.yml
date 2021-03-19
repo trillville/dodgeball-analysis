@@ -1,0 +1,23 @@
+service : test-deploy
+
+plugins:
+  - serverless-python-requirements
+provider:
+ name: aws
+ runtime: python3.8
+
+custom:
+ pythonRequirements:
+  slim : true
+
+functions:
+ lgb-lambda:
+  name: lgb-lambda-function
+  description : LGB inference
+  handler : model_lambda_function.lambda_handler
+  events :
+   - http : GET /test
+
+exclude:
+    - node_modules/**
+    - venv/**
