@@ -81,3 +81,8 @@ class DataMocker:
         x[inds, cols] = (x[inds, cols] + 1) % 2
         df[self.attributes] = x
         return df
+
+if __name__ == "__main__":
+    arp = DataMocker(num_samples=1000000, params_loc="/Users/tillman/dodgeball/dodgeball-analysis/model_training/adjusted_data_parameters.json")
+    data =  arp.generate_data()
+    data.to_csv("/Users/tillman/dodgeball/dodgeball-analysis/model_training/adjusted_sample_data.csv", index=False)

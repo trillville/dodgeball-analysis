@@ -115,5 +115,5 @@ class FraudModel:
 
 
 if __name__ == "__main__":
-    model = FraudModel(data_path="~/dodgeball/dodgeball-analysis/notebooks/sample_data.csv")
+    model = FraudModel(data_path="~/dodgeball/dodgeball-analysis/model_training/adjusted_sample_data.csv")
     model.train()
