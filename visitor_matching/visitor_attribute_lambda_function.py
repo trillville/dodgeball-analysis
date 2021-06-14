@@ -8,5 +8,8 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": 200,
-        "body": {"match_score": results["score"], "ip_timing_red_flag": results["ip_timing_red_flag"]
+        "body": {
+            "match_score": results["score"],
+            "ip_timing_red_flag": results["ip_timing_red_flag"],
+        },
     }
