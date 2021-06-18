@@ -11,7 +11,7 @@ The match score is between [0, 100] and is a function of all of the different ca
 To deploy:
 ```
 zip visitor-match.zip visitor_attribute_lambda_function.py utils.py visitor_attribute_compare.py
-aws lambda create-function --function-name visitor_attribute_matching --zip-file fileb://fingerprint-match.zip --handler visitor_attribute_lambda_function.py --runtime python3.8 --role arn:aws:iam::{your_iam_id}:role/lambda-fingerprint-matching
+aws lambda create-function --function-name visitor_attribute_matching --zip-file fileb://fingerprint-match.zip --handler visitor_attribute_lambda_function.lambda_handler  --runtime python3.8 --role arn:aws:iam::{your_iam_id}:role/lambda-fingerprint-matching
 ```
 
 Unfinished TODOs:
