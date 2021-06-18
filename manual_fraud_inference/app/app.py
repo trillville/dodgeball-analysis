@@ -12,5 +12,5 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": 200,
-        "body": {"prediction_type": "manual_fraud", "fruad_probability": round(result, 4)},
+        "body": {"prediction_type": "manual_fraud", "fruad_probability": 100 * round(result, 4)},
     }
